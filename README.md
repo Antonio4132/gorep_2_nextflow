@@ -44,8 +44,28 @@ En esta consulta, se puede comprobar como de similares son dos textos utilizando
 2. Cos2: La primera cadena de texto a comparar.
 
 El resultado de la ejecución será un valor numérico, que indica como de similares son los textos, siendo cero iguales, y cuanto mayor sea el valor mas distintos serán los textos. Como ejemplo de ejecucion:
+
 ```
-Mierda
+nextflow run gorep.nf --cos1="Heart Brain" --cos2="Lung Liver Pancreas"
+```
+
+Dando como resultado:
+
+
+```
+N E X T F L O W  ~  version 21.04.3
+Launching `gorep.nf` [stoic_coulomb] - revision: 4a35c60bdd
+GOREP - N F  ~  version 1.0
+=================================
+Install Directory    : /Users/Antonio/Desktop/BigData/Beca/Nextflow_GOREP/gorep_2_nextflow/GOREP
+
+
+Intalling GOREP...
+executor >  local (3)
+[d7/b6d75d] process > install_gorep [100%] 1 of 1 ✔
+[9f/3b589a] process > start_gorep   [100%] 1 of 1 ✔
+[fc/4570af] process > cosine_query  [100%] 1 of 1 ✔
+0.616208295374933
 ```
 
 ### Similares a un Texto
