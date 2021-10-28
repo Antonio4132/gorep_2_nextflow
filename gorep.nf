@@ -100,7 +100,7 @@ if(params.cos1 != "" && params.cos2 != ""){
     /* ---- Cosine Query ---- */
 
     a = params.cos1.replace(" ", "+")
-    b = params.cos1.replace(" ", "+")
+    b = params.cos2.replace(" ", "+")
     log.info "Doing Cosine Query..."
     log.info "Text1: $params.cos1"
     log.info "Text2: $params.cos2"
