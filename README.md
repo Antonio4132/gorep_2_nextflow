@@ -34,8 +34,130 @@ nexflow run gorep.nf --exit=y
 
 ## Consultas al Módulo IA
 
+El modulo IA contiene un skipgrama entrenado sobre una ontología, sobre el que se pueden realizar distintas consultas. 
+
 ### Similitud entre Textos
+
+En esta consulta, se puede comprobar como de similares son dos textos utilizando la distancia del coseno. Para su ejecución, nextflow usa dos parámetros:
+
+1. Cos1: La primera cadena de texto a comparar.
+2. Cos2: La primera cadena de texto a comparar.
+
+El resultado de la ejecución será un valor numérico, que indica como de similares son los textos, siendo cero iguales, y cuanto mayor sea el valor mas distintos serán los textos. Como ejemplo de ejecucion:
+```
+Mierda
+```
 
 ### Similares a un Texto
 
+En esta consulta, se puede comprobar que claves del modelos son mas similares al texto suministrado. Para su ejecución, nextflow usa un parámetros:
+
+1. Sim: Texto del que buscar claves similares.
+
+El resultado de la ejecución será una lista de tuplas clave/valor, donde la clave inidica que elemento del modelo es similar, y el valor la similitud, siendo 1 igual, y cuando mas cerca de 1 mas similar. Como ejemplo de ejecución:
+
+```
+nextflow run gorep.nf --sim="Heart Brain"
+
+```
+Dando como resultado:
+
+```
+N E X T F L O W  ~  version 21.04.3
+Launching `gorep.nf` [distraught_ekeblad] - revision: a0d245fe4e
+GOREP - N F  ~  version 1.0
+=================================
+Install Directory    : /Users/Antonio/Desktop/Test_NF/GOREP
+
+
+Starting GOREP...
+executor >  local (2)
+[e1/60bf14] process > start_gorep      [100%] 1 of 1 ✔
+[ee/e14d16] process > similarity_query [100%] 1 of 1 ✔
+Doing Similarity Query...
+text: Heart Brain
+[
+  [
+    "(MRI;", 
+    0.9813061356544495
+  ], 
+  [
+    "(GDS)", 
+    0.9755714535713196
+  ], 
+  [
+    "NlmCategory=\\\"METHODS\\\":Pallidal", 
+    0.9750590324401855
+  ], 
+  [
+    "thickness),", 
+    0.9737231135368347
+  ], 
+  [
+    "jerk-locked", 
+    0.9734430909156799
+  ], 
+  [
+    "wakeful,", 
+    0.9730979800224304
+  ], 
+  [
+    "Subject4_DENV", 
+    0.972767174243927
+  ], 
+  [
+    "evaluations,", 
+    0.9725733995437622
+  ], 
+  [
+    "electroencephalography,", 
+    0.9724870324134827
+  ], 
+  [
+    "Instrumental", 
+    0.971684455871582
+  ]
+]
+```
+
 ### Embedding de un Texto
+
+En esta consulta, se obtiene el vector numérico asociado a un texto. Para su ejecución, nextflow usa un parámetros:
+
+1. Vect: Texto del que obtener el embedding.
+
+El resultado de la ejecución será una lista de valores numéricos, que se corresponden con el embedding. Como ejemplo de ejecución:
+
+```
+nextflow run gorep.nf --vect="Heart Brain"
+
+```
+Dando como resultado:
+
+```
+N E X T F L O W  ~  version 21.04.3
+Launching `gorep.nf` [infallible_almeida] - revision: a0d245fe4e
+GOREP - N F  ~  version 1.0
+=================================
+Install Directory    : /Users/Antonio/Desktop/Test_NF/GOREP
+
+
+Starting GOREP...
+executor >  local (2)
+[1f/19d25d] process > start_gorep     [100%] 1 of 1 ✔
+[32/7829da] process > vectorize_query [100%] 1 of 1 ✔
+Doing Vecotrize Query...
+text: Heart Brain
+[
+  -0.5900202989578247, 
+  -0.4312886595726013, 
+  -2.752434730529785, 
+  0.5321708917617798, 
+  1.9965240955352783, 
+  -0.9600090384483337, 
+  -0.7417000532150269, 
+  0.23237694799900055, 
+  0.8707584142684937, 
+  0.3656192421913147
+]
+```
