@@ -13,7 +13,7 @@ Donde el directorio es la ubicación de la instalación de nexflow, por ejemplo:
 ```
 /Users/Antonio/Desktop/nexflow run gorep.nf
 ```
-Es posible eliminar la ruta del comando moviendo nextflow (el archivo de instalacion, no el archivo a ejecutar) a un directorio accesible en la variable $PATH, como se comenta en la documentación. El comando tendría entonces esta forma:
+Es posible eliminar la ruta del comando moviendo nextflow (el archivo de instalación, no el archivo a ejecutar) a un directorio accesible en la variable $PATH, como se comenta en la documentación. El comando tendría entonces esta forma:
 ```
 nexflow run "nexflow_file.nf"
 ```
@@ -43,7 +43,7 @@ En esta consulta, se puede comprobar como de similares son dos textos utilizando
 1. Cos1: La primera cadena de texto a comparar.
 2. Cos2: La primera cadena de texto a comparar.
 
-El resultado de la ejecución será un valor numérico, que indica como de similares son los textos, siendo cero iguales, y cuanto mayor sea el valor mas distintos serán los textos. Como ejemplo de ejecucion:
+El resultado de la ejecución será un valor numérico, que indica como de similares son los textos, siendo cero iguales, y cuanto mayor sea el valor mas distintos serán los textos. Como ejemplo de ejecución:
 
 ```
 nextflow run gorep.nf --cos1="Heart Brain" --cos2="Lung Liver Pancreas"
@@ -70,11 +70,11 @@ executor >  local (3)
 
 ### Similares a un Texto
 
-En esta consulta, se puede comprobar que claves del modelos son mas similares al texto suministrado. Para su ejecución, nextflow usa un parámetros:
+En esta consulta, se puede comprobar que claves del modelos son mas similares al texto suministrado. Para su ejecución, nextflow usa un parámetro:
 
 1. Sim: Texto del que buscar claves similares.
 
-El resultado de la ejecución será una lista de tuplas clave/valor, donde la clave inidica que elemento del modelo es similar, y el valor la similitud, siendo 1 igual, y cuando mas cerca de 1 mas similar. Como ejemplo de ejecución:
+El resultado de la ejecución será una lista de tuplas clave/valor, donde la clave inidica que elemento del modelo es similar, y el valor la similitud, siendo 1 igual, y cuanto más cerca de 1 más similar. Como ejemplo de ejecución:
 
 ```
 nextflow run gorep.nf --sim="Heart Brain"
@@ -142,7 +142,7 @@ text: Heart Brain
 
 ### Embedding de un Texto
 
-En esta consulta, se obtiene el vector numérico asociado a un texto. Para su ejecución, nextflow usa un parámetros:
+En esta consulta, se obtiene el vector numérico asociado a un texto. Para su ejecución, nextflow usa un parámetro:
 
 1. Vect: Texto del que obtener el embedding.
 
