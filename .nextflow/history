@@ -1,0 +1,9 @@
+2021-11-08 09:01:44	21.1s	mad_euler	OK	4a35c60bdd806885669866f794892e3d	d8156041-0052-4b24-89f8-758d0c30ca92	nextflow run gorep.nf
+2021-11-08 09:07:05	16.5s	voluminous_hugle	OK	f4d2abe87feb738b6a6bb27865abe730	f000970f-3fa9-4890-8c53-3dbb29e7f32e	nextflow run gorep.nf --update=y
+2021-11-08 09:08:40	13.4s	furious_cori	OK	f4d2abe87feb738b6a6bb27865abe730	1baa7b33-326b-4f5d-9c34-487556dcf63e	nextflow run gorep.nf --update=y
+2021-11-08 09:09:52	17.1s	ridiculous_sanger	OK	f4d2abe87feb738b6a6bb27865abe730	44c3b935-c120-4541-84c2-b876df395e4a	nextflow run gorep.nf
+2021-11-08 09:11:17	16.8s	gloomy_swirles	ERR	e9dece45e60b3c13e9df05f765f6a817	efa88bc5-9dbe-4b95-8c3e-f43f8ab365b0	nextflow run gorep.nf --update=y
+2021-11-08 09:12:39	4.7s	ridiculous_bhabha	ERR	893f1462a96890db1c65f3b912a611a1	7a0cd84b-e810-43dd-bb54-9cb77855c8dd	nextflow run gorep.nf --update=y
+2021-11-08 09:12:56	4.6s	evil_noyce	ERR	893f1462a96890db1c65f3b912a611a1	81613ce5-d5ae-41e5-9fc9-e0634796b279	nextflow run gorep.nf --update=y
+2021-11-08 09:13:37	17.3s	silly_liskov	OK	893f1462a96890db1c65f3b912a611a1	a7666a2a-22e8-4cf4-be2f-46b87914ce61	nextflow run gorep.nf
+2021-11-08 09:14:08	27s	chaotic_poincare	OK	893f1462a96890db1c65f3b912a611a1	7a6cd49f-2fe8-4b4b-8135-29473d7e87be	nextflow run gorep.nf --update=y

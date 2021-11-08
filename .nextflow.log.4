@@ -1,0 +1,75 @@
+nov.-08 09:11:11.383 [main] DEBUG nextflow.cli.Launcher - $> nextflow run gorep.nf --update=y
+nov.-08 09:11:11.568 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+nov.-08 09:11:11.627 [main] INFO  nextflow.cli.CmdRun - Launching `gorep.nf` [gloomy_swirles] - revision: e9dece45e6
+nov.-08 09:11:11.809 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/Users/Antonio/.nextflow/plugins
+nov.-08 09:11:11.812 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+nov.-08 09:11:11.816 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+nov.-08 09:11:11.836 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+nov.-08 09:11:11.840 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+nov.-08 09:11:11.849 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+nov.-08 09:11:11.911 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+nov.-08 09:11:12.049 [main] DEBUG nextflow.Session - Session uuid: efa88bc5-9dbe-4b95-8c3e-f43f8ab365b0
+nov.-08 09:11:12.049 [main] DEBUG nextflow.Session - Run name: gloomy_swirles
+nov.-08 09:11:12.052 [main] DEBUG nextflow.Session - Executor pool size: 4
+nov.-08 09:11:17.155 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.3 build 5560
+  Created: 21-07-2021 15:09 UTC (17:09 CEST)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.7 on Java HotSpot(TM) 64-Bit Server VM 12.0.1+12
+  Encoding: UTF-8 (UTF-8)
+  Process: 25141@MacBook-de-Antonio.local [192.168.1.37]
+  CPUs: 4 - Mem: 8 GB (40.3 MB) - Swap: 4 GB (1.6 GB)
+nov.-08 09:11:17.213 [main] DEBUG nextflow.Session - Work-dir: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/work [Mac OS X]
+nov.-08 09:11:17.213 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/bin
+nov.-08 09:11:17.263 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+nov.-08 09:11:17.305 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+nov.-08 09:11:17.729 [main] DEBUG nextflow.Session - Session start invoked
+nov.-08 09:11:20.768 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+nov.-08 09:11:20.786 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: stop_gorep, install_gorep, vectorize_query, update_gorep, similarity_query, start_gorep, cosine_query
+nov.-08 09:11:20.807 [main] INFO  nextflow.Nextflow - GOREP - N F  ~  version 1.0
+nov.-08 09:11:20.808 [main] INFO  nextflow.Nextflow - =================================
+nov.-08 09:11:20.809 [main] INFO  nextflow.Nextflow - Install Directory    : /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/GOREP
+nov.-08 09:11:20.809 [main] INFO  nextflow.Nextflow - 
+
+nov.-08 09:11:20.828 [main] INFO  nextflow.Nextflow - Stopping GOREP...
+nov.-08 09:11:20.958 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+nov.-08 09:11:20.958 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+nov.-08 09:11:20.970 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+nov.-08 09:11:20.980 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+nov.-08 09:11:21.265 [main] INFO  nextflow.Nextflow - Updating GOREP...
+nov.-08 09:11:21.269 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+nov.-08 09:11:21.269 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+nov.-08 09:11:21.286 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+nov.-08 09:11:21.287 [main] DEBUG nextflow.Session - Session await
+nov.-08 09:11:21.560 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+nov.-08 09:11:21.570 [Task submitter] INFO  nextflow.Session - [f3/9bbe37] Submitted process > stop_gorep
+nov.-08 09:11:33.467 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: stop_gorep; status: COMPLETED; exit: 0; error: -; workDir: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/work/f3/9bbe3701b0a365c3c4bb8609800707]
+nov.-08 09:11:33.519 [Actor Thread 4] ERROR nextflow.processor.TaskProcessor - Error executing process > 'update_gorep'
+
+Caused by:
+  Unknown variable 'install_dir' -- Make sure it is not misspelt and defined somewhere in the script before using it
+
+Source block:
+  """
+           rm -r $params.dir
+           
+           mkdir $install_dir
+           cd $install_dir
+           git clone https://github.com/Antonio4132/gorep_2.git
+           cd gorep_2/
+           
+           """
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+nov.-08 09:11:33.530 [Actor Thread 4] DEBUG nextflow.Session - Session aborted -- Cause: Process `update_gorep` script contains error(s)
+nov.-08 09:11:33.595 [Actor Thread 4] DEBUG nextflow.Session - The following nodes are still active:
+[process] update_gorep
+  status=ACTIVE
+  port 0: (value) bound ; channel: a
+  port 1: (cntrl) -     ; channel: $
+
+nov.-08 09:11:33.597 [main] DEBUG nextflow.Session - Session await > all process finished
+nov.-08 09:11:33.599 [main] DEBUG nextflow.Session - Session await > all barriers passed
+nov.-08 09:11:33.618 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=11.8s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+nov.-08 09:11:33.805 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+nov.-08 09:11:33.825 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -6,6 +6,7 @@ params.cos1 = ""
 params.cos2 = ""
 params.sim = ""
 params.vect = ""
+params.update = ""
 
 
 
@@ -49,7 +50,7 @@ else {
 }
 
 
-if(params.exit == "y"){
+if(params.exit == "y" || params.update == "y"){
 
     /* ---- Stop GOREP ---- */
 
@@ -60,6 +61,9 @@ if(params.exit == "y"){
 
         input:
         val x from dir
+        
+        output:
+        val "done" into stopped
           
         script:
 
@@ -90,6 +94,33 @@ else {
          """
          cd $x
          docker-compose up -d
+         """
+         
+    }
+}
+
+if(params.update == "y"){
+
+    /* ---- Reinstall GOREP ---- */
+
+    log.info "Updating GOREP..."
+
+    process update_gorep {
+
+
+        input:
+        val a from stopped
+          
+        script:
+
+         """
+         rm -r $params.dir
+         
+         mkdir $params.dir
+         cd $params.dir
+         git clone https://github.com/Antonio4132/gorep_2.git
+         cd gorep_2/
+         
          """
          
     }

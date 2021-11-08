@@ -1,0 +1,80 @@
+nov.-08 09:12:50.636 [main] DEBUG nextflow.cli.Launcher - $> nextflow run gorep.nf --update=y
+nov.-08 09:12:50.898 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+nov.-08 09:12:50.973 [main] INFO  nextflow.cli.CmdRun - Launching `gorep.nf` [evil_noyce] - revision: 893f1462a9
+nov.-08 09:12:51.155 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/Users/Antonio/.nextflow/plugins
+nov.-08 09:12:51.158 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+nov.-08 09:12:51.162 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+nov.-08 09:12:51.177 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+nov.-08 09:12:51.182 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+nov.-08 09:12:51.191 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+nov.-08 09:12:51.214 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+nov.-08 09:12:51.360 [main] DEBUG nextflow.Session - Session uuid: 81613ce5-d5ae-41e5-9fc9-e0634796b279
+nov.-08 09:12:51.360 [main] DEBUG nextflow.Session - Run name: evil_noyce
+nov.-08 09:12:51.365 [main] DEBUG nextflow.Session - Executor pool size: 4
+nov.-08 09:12:56.470 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.3 build 5560
+  Created: 21-07-2021 15:09 UTC (17:09 CEST)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.7 on Java HotSpot(TM) 64-Bit Server VM 12.0.1+12
+  Encoding: UTF-8 (UTF-8)
+  Process: 25299@MacBook-de-Antonio.local [192.168.1.37]
+  CPUs: 4 - Mem: 8 GB (216.5 MB) - Swap: 4 GB (1.6 GB)
+nov.-08 09:12:56.500 [main] DEBUG nextflow.Session - Work-dir: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/work [Mac OS X]
+nov.-08 09:12:56.501 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/bin
+nov.-08 09:12:56.522 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+nov.-08 09:12:56.543 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+nov.-08 09:12:56.756 [main] DEBUG nextflow.Session - Session start invoked
+nov.-08 09:12:58.399 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+nov.-08 09:12:58.415 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: stop_gorep, install_gorep, vectorize_query, update_gorep, similarity_query, start_gorep, cosine_query
+nov.-08 09:12:58.431 [main] INFO  nextflow.Nextflow - GOREP - N F  ~  version 1.0
+nov.-08 09:12:58.432 [main] INFO  nextflow.Nextflow - =================================
+nov.-08 09:12:58.433 [main] INFO  nextflow.Nextflow - Install Directory    : /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/GOREP
+nov.-08 09:12:58.433 [main] INFO  nextflow.Nextflow - 
+
+nov.-08 09:12:58.452 [main] INFO  nextflow.Nextflow - Stopping GOREP...
+nov.-08 09:12:58.579 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+nov.-08 09:12:58.579 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+nov.-08 09:12:58.589 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+nov.-08 09:12:58.600 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=8 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+nov.-08 09:12:58.833 [main] INFO  nextflow.Nextflow - Updating GOREP...
+nov.-08 09:12:58.840 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+nov.-08 09:12:58.840 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+nov.-08 09:12:58.856 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+nov.-08 09:12:58.857 [main] DEBUG nextflow.Session - Session await
+nov.-08 09:12:59.066 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+nov.-08 09:12:59.078 [Task submitter] INFO  nextflow.Session - [04/d04fa4] Submitted process > stop_gorep
+nov.-08 09:13:00.126 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: stop_gorep; status: COMPLETED; exit: 1; error: -; workDir: /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/work/04/d04fa44b5cb3f98c0626d1fa31452d]
+nov.-08 09:13:00.211 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'stop_gorep'
+
+Caused by:
+  Process `stop_gorep` terminated with an error exit status (1)
+
+Command executed:
+
+  cd /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/GOREP/gorep_2
+  docker-compose stop
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  
+          Can't find a suitable configuration file in this directory or any
+          parent. Are you in the right directory?
+  
+          Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
+          
+
+Work dir:
+  /Users/Antonio/Desktop/BigData/Beca/gorep_Nextflow/gorep_2_nextflow/work/04/d04fa44b5cb3f98c0626d1fa31452d
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+nov.-08 09:13:00.230 [main] DEBUG nextflow.Session - Session await > all process finished
+nov.-08 09:13:00.232 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `stop_gorep` terminated with an error exit status (1)
+nov.-08 09:13:00.276 [main] DEBUG nextflow.Session - Session await > all barriers passed
+nov.-08 09:13:00.292 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=982ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+nov.-08 09:13:00.567 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+nov.-08 09:13:00.593 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
