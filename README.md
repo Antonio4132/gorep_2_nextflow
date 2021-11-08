@@ -32,6 +32,12 @@ Para parar la ejecución de GOREP2, basta con utilizar el siguiente comando:
 nexflow run gorep.nf --exit=y
 ```
 
+### Actualizar el Repositorio GOREP
+Si fuese necesario actualizar el repositorio GOREP2,  se puede reinstalar con este comando:
+```
+nextflow run gorep.nf --update=y
+```
+
 ## Consultas al Módulo IA
 
 El modulo IA contiene un skipgrama entrenado sobre una ontología, sobre el que se pueden realizar distintas consultas. 
